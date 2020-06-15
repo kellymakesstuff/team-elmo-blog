@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Post from './components/Post'
+import { Route, Switch, Link } from 'react-router-dom'
+import axios from 'axios'
 import './App.css';
 
 function App() {
+
+  const [post, updatePost] = useState({
+    author: "Baby Yoda",
+    img: "https://miro.medium.com/max/1400/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+    post: "I love cats.",
+    title: "Cats love me."
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      < Post post={post} />
     </div>
   );
 }
