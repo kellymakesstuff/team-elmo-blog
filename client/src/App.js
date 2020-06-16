@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
 import Nav from "./components/shared/Nav.jsx"
+import PostList from "./components/PostList"
 
 //
 function App() {
