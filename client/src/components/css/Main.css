@@ -21,7 +21,9 @@ body {
 
 .title {
     font-family: 'Bebas Neue', cursive;
-    color: #2A9D8F
+    color: #2A9D8F;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px #264653;
 }
 
 .post-text, .author {
@@ -43,6 +45,43 @@ body {
     width: 100%;
 }
 
-a{
-    color:white;
+.nav {
+    width: 100%;
+    height: 50px;
+    background: #E76F51;
+    display: flex;
+    padding: 20px 0;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -2px;
+}
+
+.nav div {
+    display: inline;
+}
+
+.logo {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 38px;
+    text-decoration: none;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px #264653;
+    margin-top: 6px;
+}
+
+.link, a :hover :visited :active {
+    text-decoration: none;
+    color: #E9C46A;
+}
+
+.links {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    color: #E9C46A;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    text-align: end;
+    text-decoration: none;
 }
