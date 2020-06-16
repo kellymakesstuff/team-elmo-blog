@@ -20,14 +20,18 @@ function App() {
   }
 
 
-  return (
-    <div className="app">
+  return <>
+    <header>
+      <Nav />
+    </header>
+
+    <div className="container">
 
       <PostList post={post} />
 
 
     </div>
-  );
+  </>
 }
 
 export default App;
