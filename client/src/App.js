@@ -22,7 +22,9 @@ function App() {
 
   return (
     <div className="app">
-      {post.map(post => < Post post={post} />)}
+
+      <PostList post={post} />
+
 
     </div>
   );
