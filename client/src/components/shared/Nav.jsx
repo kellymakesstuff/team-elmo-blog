@@ -11,7 +11,7 @@ export default function Nav() {
                 <div className="links">
                     <NavLink className="link" to="/add-post">Add Post</NavLink>
                 </div>
-            </div>  
+            </div> 
         </nav>
     )
 }
