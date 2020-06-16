@@ -5,7 +5,10 @@ import axios from 'axios'
 import './App.css';
 import Nav from "./components/shared/Nav.jsx"
 
-//
+import PostList from "./components/PostList"
+import AddPost from "./components/AddPost.jsx"
+
+
 function App() {
   const [post, updatePost] = useState([])
 
@@ -30,6 +33,10 @@ function App() {
 
       <PostList post={post} />
 
+
+      <Route >
+        <AddPost path="/add-post"/>
+      </Route>
 
     </div>
   </>
