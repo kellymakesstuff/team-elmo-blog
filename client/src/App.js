@@ -22,18 +22,22 @@ function App() {
   }
 
 
-  return (
-    <div className="app">
+  return <>
+    <header>
       <Nav />
+    </header>
 
-      {post.map(post => < Post post={post} />)}
+    <div className="container">
+
+      <PostList post={post} />
+
 
       <Route >
         <AddPost path="/add-post"/>
       </Route>
 
     </div>
-  );
+  </>
 }
 
 export default App;
