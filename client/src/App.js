@@ -25,22 +25,20 @@ function App() {
   }
 
 
-  return <>
+  return <div>
     <header>
       <Nav />
     </header>
+    <Route path="/" exact>
+      <div className="container">
+        <PostList post={post} />
+      </div>
+    </Route>
 
-    <div className="container">
-
-      <PostList post={post} />
-
-
-      <Route path="/add-post" >
-        <AddPost />
-      </Route>
-
-    </div>
-  </>
+    <Route path="/add-post">
+      <AddPost />
+    </Route>
+  </div>
 }
 
 export default App;
