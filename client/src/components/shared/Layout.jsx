@@ -1,11 +1,17 @@
 import React, { useEffect, useState} from 'react';
 import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
+import Nav from './Nav'
 
-export default function Layout() {
+const Layout = (props) => {
     return (
-        <div>
-            
+        <div className="layout">
+            <Nav />
+                <div className="layout-children">
+                    {props.children}
+                </div>
         </div>
     )
 }
+
+export default Layout
