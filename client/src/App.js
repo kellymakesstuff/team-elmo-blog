@@ -21,12 +21,18 @@ function App() {
   }
 
 
-  return (
+  return <>
+    <header>
+      <Nav />
+    </header>
+
     <div className="container">
-      {post.map(post => < Post post={post} />)}
+
+      <PostList post={post} />
+
 
     </div>
-  );
+  </>
 }
 
 export default App;
