@@ -3,7 +3,9 @@ import Post from './components/Post'
 import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
+import Nav from "./components/shared/Nav.jsx"
 
+//
 function App() {
   const [post, updatePost] = useState([])
 
@@ -19,12 +21,18 @@ function App() {
   }
 
 
-  return (
-    <div className="app">
-      {post.map(post => < Post post={post} />)}
+  return <>
+    <header>
+      <Nav />
+    </header>
+
+    <div className="container">
+
+      <PostList post={post} />
+
 
     </div>
-  );
+  </>
 }
 
 export default App;
