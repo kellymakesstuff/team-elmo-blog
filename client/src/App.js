@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
 import Nav from "./components/shared/Nav.jsx"
+import AddPost from "./components/AddPost.jsx"
 
 //
 function App() {
@@ -26,6 +27,10 @@ function App() {
       <Nav />
 
       {post.map(post => < Post post={post} />)}
+
+      <Route >
+        <AddPost path="/add-post"/>
+      </Route>
 
     </div>
   );
