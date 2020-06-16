@@ -15,9 +15,9 @@ handleChange(e) {
 let PostList = [];
 let newList = [];
 if (e.target.value !== "") {
-postList = this.props.items;
+PostList = this.props.items;
 
-newList = postList.filter(item => {
+newList = PostList.filter(item => {
   const lc = item.toLowerCase();
   const filter = e.target.value.toLowerCase();
   return lc.includes(filter);
