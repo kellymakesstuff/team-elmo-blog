@@ -22,9 +22,7 @@ function App() {
 
 
   return (
-    <div className="app">
-      <Nav />
-
+    <div className="container">
       {post.map(post => < Post post={post} />)}
 
     </div>
