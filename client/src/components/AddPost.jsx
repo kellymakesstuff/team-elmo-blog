@@ -5,7 +5,7 @@ import axios from 'axios'
 export default function AddPost() {
     return (
         <div>
-            
+            <h1>Hi There</h1>
         </div>
     )
 }
