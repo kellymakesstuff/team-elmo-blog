@@ -67,8 +67,18 @@ class EditPost extends Component {
 
     return (
       <div>
+        <img className="edit-image" src={post.img} alt={post.author}/>
+        <form onSubmit ={this.handleSubmit}>
+          <input
+            placeholder="Image"
+            value={post.img}
+            name="img"
+            required
+            onChange={this.handleChange}
+          />
 
-        
+        </form>
+
         
       </div>
     )
