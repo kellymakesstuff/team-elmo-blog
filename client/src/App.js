@@ -3,6 +3,7 @@ import Post from './components/Post'
 import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
+import Nav from "./components/shared/Nav.jsx"
 
 //
 function App() {
@@ -22,6 +23,8 @@ function App() {
 
   return (
     <div className="app">
+      <Nav />
+
       {post.map(post => < Post post={post} />)}
 
     </div>
