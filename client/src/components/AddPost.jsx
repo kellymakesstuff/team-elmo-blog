@@ -1,31 +1,13 @@
-import React, { useEffect, useState} from 'react';
-import { Route, Switch, Link } from 'react-router-dom'
-import axios from 'axios'
-import createPost from '../services/posts'
 
-export default function AddPost() {
-    return (
-        <div>
-            <h1>Add Post</h1>
-            <form>
-                <input type='text' placeholder="author"/>
-                <input type='text' placeholder="img"/>
-                <input type='text' placeholder="post"/>
-                <input type='text' placeholder="title"/>
-                <button>submit</button>
-            </form>
-        </div>
-    )
-}
 import React, { useEffect, useState, Component } from 'react';
 import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
-import createPost from '../services/posts'
+import { createPost } from '../services/posts'
 
 
 class AddPost extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             post: {
                 author: '',
@@ -37,34 +19,50 @@ class AddPost extends Component {
     }
 
     handleAuthorChange = event => {
-        this.setState({
-            author: event.target.value
-        })
+        const value = event.target.value
+        this.setState(prevState => ({
+            post: {
+                ...prevState.post,
+                author: value
+            }
+        }))
     }
 
     handleImgChange = event => {
-        this.setState({
-            img: event.target.value
-        })
+        const value = event.target.value
+        this.setState(prevState => ({
+            post:{
+            ...prevState.post, 
+            img: value
+            }
+        }))
     }
 
     handlePostChange = event => {
-        this.setState({
-            post: event.target.value
-        })
+        const value = event.target.value
+        this.setState(prevState => ({
+            post:{
+            ...prevState.post, 
+            post: value
+            }
+        }))
     }
 
     handleTitleChange = event => {
-        this.setState({
-            title: event.target.value
-        })
+        const value = event.target.value
+        this.setState(prevState => ({
+            post:{
+            ...prevState.post, 
+            title: value
+            }
+        }))
     }
 
     handleSubmit = async (event) => {
         event.preventDefault()
-       const create = await createPost()
+        const create = await createPost(this.state.post)
+        //    this.setState({create})
     }
-
 
 
     render() {
@@ -72,7 +70,7 @@ class AddPost extends Component {
         return (
             <div>
                 <h1>Add Post</h1>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleAuthorChange} type='text' placeholder="author" />
                     <input onChange={this.handleImgChange} type='text' placeholder="img" />
                     <input onChange={this.handlePostChange} type='text' placeholder="post" />
