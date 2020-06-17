@@ -5,6 +5,7 @@ import axios from "axios";
 import PostList from "./src/components/PostList";
 
 export default function Search({ post, updatePost }) {
+
   const handleChange = (e) => {
     let PostList = [];
     let newList = [];
@@ -18,6 +19,7 @@ export default function Search({ post, updatePost }) {
     } else {
       newList = post.items;
     }
+
     useEffect(() => {
       updatePost(newList);
     }, []);
