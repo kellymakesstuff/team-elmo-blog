@@ -70,9 +70,9 @@ class EditPost extends Component {
       <div>
         <div className="main-edit"> 
         <img className="edit-image" src={post.img} alt={post.author} />
-        <form className="first-form" onSubmit ={this.handleSubmit}>
+        {/* <form className="first-form" onSubmit ={this.handleSubmit}>
           
-        </form>
+        </form> */}
 
           <form className="edit-form" onSubmit={this.handleSubmit}>
 

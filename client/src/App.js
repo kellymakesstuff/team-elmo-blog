@@ -41,7 +41,7 @@ function App() {
     <Route path="/add-post">
       <AddPost />
     </Route>
-
+  
     <Route exact path="/posts/:id/edit" component={EditPost} />
   </div>
 }
