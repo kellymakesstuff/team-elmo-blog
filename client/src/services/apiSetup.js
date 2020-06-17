@@ -1,6 +1,6 @@
 // import axios from "axios"
 
-// let apiUrl 
+let apiUrl
 
 // const apiUrls = {
 //   production: "https://blog-app-exercise-hw.herokuapp.com/api",
@@ -13,8 +13,3 @@
 //   apiUrl = apiUrls.production 
 // }
 
-// const api = axios.create({
-//   baseUrl:apiUrl
-// })
-
-// export default api 

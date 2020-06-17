@@ -1,44 +1,107 @@
 .post {
-    width: 300px;
-    height: 400px;
-    margin: 10px;
-    border: solid #E76F51 1px;
-    padding: 5px;
-    background: #E9C46A;
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  border: solid #e76f51 1px;
+  padding: 5px;
+  background: #e9c46a;
 }
 
 body {
-    background: #264653
+  background: #264653;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .title {
-    font-family: 'Bebas Neue', cursive;
-    color: #2A9D8F
+  font-family: "Bebas Neue", cursive;
+  color: #2a9d8f;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px #264653;
 }
 
-.post-text, .author {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 12px;
-    color: black;
+.post-text,
+.author {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  color: black;
 }
 
 .post-img {
-    height: 150px;
-    width: auto;
-    display: flex;
-    align-content: center;
+  height: 150px;
+  width: auto;
+  display: flex;
+  align-content: center;
 }
 
 .img-container {
-    display: flex;
-    align-content: center;
-    width: 100%;
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  background: #e76f51;
+  display: flex;
+  padding: 20px 0;
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-top: -2px;
+}
+
+.nav div {
+  display: inline;
+}
+
+.logo {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  font-size: 38px;
+  text-decoration: none;
+  letter-spacing: 6px;
+  text-shadow: 3px 3px #264653;
+  margin-top: 6px;
+}
+
+.link,
+a :hover :visited :active {
+  text-decoration: none;
+  color: #e9c46a;
+}
+
+.links {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  color: #e9c46a;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  text-align: end;
+  text-decoration: none;
+}
+
+.searchDiv {
+  width: 40%;
+  height: 36px;
+  display: block;
+  padding: 0px 16px;
+  text-align: center;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: normal;
+  background: white;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
