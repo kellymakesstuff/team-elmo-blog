@@ -8,7 +8,7 @@ export default function PostList({ post }) {
   return (
     <div>
 
-      {post.map(post => < Post id={post._id} post={post} />)}
+      {post.length > 0 && post.map(post => < Post  post={post} />)}
     </div>
   )
 }

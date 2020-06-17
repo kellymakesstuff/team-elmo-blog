@@ -15,7 +15,9 @@ function PostDetail(props) {
       {filteredPost && <div>
         <div>{filteredPost.title}</div>
         {/* @Felicia: I left the height and width here but you can change it to whatever you want so it's a main image like in a post  */}
-        <img src={filteredPost.img} height="200px" width="auto" />
+        <Link to={`/posts/${filteredPost._id}/edit`}>
+          <img src={filteredPost.img} height="200px" width="auto" />
+          </Link>
         <h2>Author: {filteredPost.author}</h2>
 
         <div>{filteredPost.post}</div>

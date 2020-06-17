@@ -5,6 +5,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 
 const main = async () => {
+  await Post.deleteMany()
     const posts =
       [
         {
