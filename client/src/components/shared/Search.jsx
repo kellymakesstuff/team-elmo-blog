@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import axios from "axios";
 import PostList from "./src/components/PostList";
+import "./main.css"
 
 export default function Search({ post, updatePost }) {
   const handleChange = (e) => {
@@ -23,7 +24,7 @@ export default function Search({ post, updatePost }) {
     }, []);
   };
   return (
-    <div>
+    <div class="searchDiv">
       <input
         type="text"
         className="input"
