@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import { NavLink } from "react-router-dom"
-import Search from "./Search"
+import Search from "../Search"
 
 export default function Nav() {
   return (
@@ -13,7 +13,7 @@ export default function Nav() {
           <NavLink className="link" to="/add-post">Add Post</NavLink>
 
         </div>
-        <Search />
+
       </div>
     </nav>
   )
