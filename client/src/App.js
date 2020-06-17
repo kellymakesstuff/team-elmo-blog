@@ -7,6 +7,7 @@ import Nav from "./components/shared/Nav.jsx"
 
 import PostList from "./components/PostList"
 import AddPost from "./components/AddPost.jsx"
+import EditPost from './components/EditPost';
 
 
 //
@@ -38,6 +39,8 @@ function App() {
     <Route path="/add-post">
       <AddPost />
     </Route>
+
+    <Route exact path="/posts/:id/edit" component={EditPost} />
   </div>
 }
 
