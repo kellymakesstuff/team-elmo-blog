@@ -1,20 +1,8 @@
-// import React, { useEffect, useState} from 'react';
-// import { Redirect} from 'react-router-dom'
-// // import axios from 'axios'
-// import {getPost, updatePost} from "../services/posts"
-
-// export default function EditPost() {
-//     return (
-//         <div>
-
-//         </div>
-//     )
-// }
 
 
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import { getPost, updatePost } from "../services/posts"
+import { Redirect, withRouter } from 'react-router-dom'
+import { getPost, updatePost, deletePost } from "../services/posts"
 import "./EditPost.css"
 
 
@@ -32,11 +20,14 @@ class EditPost extends Component {
       updated: false
     }
   }
+  
 
   async componentDidMount() {
+    console.log("hello",  )
     let { id } = this.props.match.params
-    const post = await getPost(id)
-    this.setState({ post })
+    console.log("line28", (id))
+    const data = await getPost(id)
+    this.setState({ post:data })
   }
 
   handleChange = (event) => {
@@ -63,7 +54,7 @@ class EditPost extends Component {
 
     const { post, updated } = this.state
     if (updated) {
-      return <Redirect to={`/posts/${this.props.match.params}`} />
+      return <Redirect to={`/posts/`} />
     }
 
     return (
@@ -115,7 +106,8 @@ class EditPost extends Component {
 
       
 
-          <button type='submit' className="save-button">Save</button>
+            <button type='submit' className="save-button">Save</button>
+            <button onClick={() => deletePost(post._id)}>delete post</button>
 
           </form>
           </div>
@@ -125,4 +117,4 @@ class EditPost extends Component {
   }
 }
 
-export default EditPost
+export default withRouter (EditPost)

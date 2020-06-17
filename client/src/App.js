@@ -9,6 +9,7 @@ import PostDetail from "./components/PostDetail"
 import PostList from "./components/PostList"
 import AddPost from "./components/AddPost.jsx"
 import EditPost from './components/EditPost';
+import { getPosts } from './services/posts';
 
 
 //
@@ -21,9 +22,9 @@ function App() {
   }, [])
 
   let apiCall = async () => {
-    let postData = await axios("https://blog-app-exercise-hw.herokuapp.com/api/posts")
+    let postData = await getPosts()
     console.log(postData.data)
-    updatePost(postData.data)
+    updatePost(postData)
   }
 
 
