@@ -4,14 +4,17 @@ import axios from 'axios'
 import './css/Main.css'
 
 export default function Post({ post }) {
-    return (
-        <div className="post">
-            <h1 className="title">{post.title}</h1>
-                <div className="img-container">
-                    <img className="post-img" src={post.img} />
-                </div>
-            <h2 className="author">Author: {post.author}</h2>
-            <p className="post-text">{post.post}</p>
+  return <>
+    <Link to={`posts/${post._id}`}>
+      <div className="post">
+        <h1 className="title">{post.title}</h1>
+        <div className="img-container">
+          <img className="post-img" src={post.img} />
         </div>
-    )
+        <h2 className="author">Author: {post.author}</h2>
+        <p className="post-text">{post.post}</p>
+
+      </div>
+    </Link>
+  </>
 }
