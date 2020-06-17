@@ -22,7 +22,7 @@ function App() {
 
   let apiCall = async () => {
     let postData = await axios("https://blog-app-exercise-hw.herokuapp.com/api/posts")
-    console.log(postData.data)
+    console.log(postData)
     updatePost(postData.data)
   }
 
@@ -46,7 +46,7 @@ function App() {
 
 
     <Route exact path="/posts/:id">
-      <PostDetail props={post} />
+      <PostDetail post={post} />
     </Route>
 
   </div >

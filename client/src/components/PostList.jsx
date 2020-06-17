@@ -5,10 +5,13 @@ import Post from "../components/Post"
 
 
 export default function PostList({ post }) {
+  
   return (
     <div>
 
-      {post.map(post => < Post id={post._id} post={post} />)}
+      {post.map(post =>
+        < Post id={post._id} post={post} />
+      )}
     </div>
   )
 }
