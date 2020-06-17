@@ -1,9 +1,8 @@
-
 import React, { useEffect, useState } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import axios from "axios";
 import PostList from "./src/components/PostList";
-import "./main.css"
+import "./main.css";
 
 export default function Search({ post, updatePost }) {
   const handleChange = (e) => {
@@ -23,12 +22,18 @@ export default function Search({ post, updatePost }) {
       updatePost(newList);
     }, []);
   };
+  // keyPressed(e) {
+  //   if (e.key === "Enter") {
+
+  //   }
+  // }
   return (
     <div class="searchDiv">
       <input
         type="text"
         className="input"
         onChange={handleChange}
+        // onKeyPress={keyPressed}
         placeholder="Search..."
       />
     </div>
