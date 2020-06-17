@@ -1,0 +1,46 @@
+.main-edit{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.title-change{
+  margin-bottom: 5ex;
+  text-align: center;
+}
+
+.edit-image{
+  width:250px;
+}
+
+.img-change{
+  margin-bottom: 2ex;
+}
+
+.author-change{
+  text-align: center;
+}
+
+.post-change{
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.edit-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2ex;
+}
+
+.save-button{
+  background-color: rgb(217, 118, 90);
+  color: white;
+  height: 15%;
+  font-weight: 600;
+  font-size: 20px;
+}
