@@ -46,7 +46,7 @@ function App() {
 
 
     <Route exact path="/posts/:id">
-      <PostDetail props={post} />
+      <PostDetail data={post} />
     </Route>
 
   </div >
