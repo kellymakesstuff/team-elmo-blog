@@ -11,8 +11,8 @@ export const getPosts = async () => {
   }
 }
 
-export const getPost = async() => {
-  try{
+export const getPost = async (id) => {
+  try {
     const response = await api.get(`/posts/${id}`)
     return response.data
   } catch (error) {
@@ -20,7 +20,7 @@ export const getPost = async() => {
   }
 }
 
-export const createPost = async posts => {
+export const createPost = async (posts) => {
   try {
     const response = await api.post('/posts', posts)
     return response.data
@@ -38,7 +38,7 @@ export const updatePost = async (id, posts) => {
   }
 }
 
-export const deletePost = async id => {
+export const deletePost = async (id) => {
   try {
     const response = await api.delete(`/posts/${id}`)
     return response.data

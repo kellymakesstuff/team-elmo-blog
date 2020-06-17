@@ -1,6 +1,6 @@
 import axios from "axios"
 
-let apiUrl 
+let apiUrl
 
 const apiUrls = {
   production: "https://blog-app-exercise-hw.herokuapp.com/api",
@@ -14,7 +14,8 @@ if (window.location.hostname === "localhost") {
 }
 
 const api = axios.create({
-  baseUrl:apiUrl
+  baseURL:apiUrl
 })
+
 
 export default api 
